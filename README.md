@@ -1,6 +1,6 @@
 # CHEMBL284-GCN
 
-![CHEMBL1082716](images/CHEMBL1082716.png)
+![CHEMBL1082716](images/CHEMBL1082716.png "This is a molecule visualization of CHEMBL1082716")
 
 ## Overview
 
