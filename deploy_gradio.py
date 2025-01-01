@@ -19,9 +19,14 @@ def fetch_smiles_from_chembl(chembl_id):
     return result['molecule_structures']['canonical_smiles']
 
 # Visualize Molecule
-def plot_molecule(smiles):
+def plot_molecule(smiles, save_path  = None):
     mol = Chem.MolFromSmiles(smiles)
     img = Draw.MolToImage(mol, size=(300, 300))
+
+    if save_path:
+        img.save(save_path)
+        print(f"Molecule image saved to: {save_path}")
+    
     return img
 
 # Prediction Function
@@ -47,7 +52,8 @@ def predict_pIC50(chembl_id, model, node_vec_len, max_atoms, device):
 # Gradio Interface Function
 def gradio_interface(chembl_id):
     smiles, pIC50 = predict_pIC50(chembl_id, model, node_vec_len, max_atoms, device)
-    molecule_img = plot_molecule(smiles)
+    save_path = f'./images/{chembl_id}.png'
+    molecule_img = plot_molecule(smiles, save_path)
 
     # Determine pIC50 range label
     if pIC50 >= 7:
