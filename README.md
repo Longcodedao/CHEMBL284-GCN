@@ -1,6 +1,12 @@
 # CHEMBL284-GCN
 
-![CHEMBL1082716](images/CHEMBL1082716.png "This is a molecule visualization of CHEMBL1082716")
+<!-- ![CHEMBL1082716](images/CHEMBL1082716.png "This is a molecule visualization of CHEMBL1082716") -->
+<figure>
+  <img
+  src="images/CHEMBL1082716.png"
+  alt="CHEMBL1082716.">
+  <figcaption>This is a molecule visualization of CHEMBL1082716</figcaption>
+</figure>
 
 ## Overview
 
